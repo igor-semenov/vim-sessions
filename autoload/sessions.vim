@@ -16,6 +16,7 @@ function! s:GetOpenFiles() abort
     let result += ['badd +' . buf.lnum .  ' ' . good_name]
   endfor
   if first != ''
+    let result += ['bd']
     let result += ['edit ' . first]
   endif
   return result
